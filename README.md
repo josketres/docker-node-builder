@@ -1,6 +1,8 @@
 # docker-node-builder
 Build your node.js based project using a docker container to cache the dependencies
 
+https://travis-ci.org/josketres/docker-node-builder.svg?branch=master
+
 # Requirements
 * docker
 
