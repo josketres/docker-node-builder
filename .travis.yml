@@ -4,5 +4,8 @@ node_js:
 services:
   - docker
 script:
-  - npm i && gulp
+  - npm i
+  - gulp
+  - docker build -t josketres/node-builder .
+  - ./build-with-docker-container.sh
 
