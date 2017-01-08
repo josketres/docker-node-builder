@@ -1,12 +1,9 @@
 {
-  "name": "cache-npm-install-with-docker",
+  "name": "docker-node-builder",
   "version": "1.0.0",
-  "description": "An example of caching npm install with docker",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "description": "Build your node.js based project using a docker container to cache the dependencies",
+  "author": "josketres",
+  "repository": "https://github.com/josketres/docker-node-builder",
   "license": "ISC",
   "devDependencies": {
     "gulp" : "3.9.1",
