@@ -11,8 +11,19 @@ First create a docker image (this image will contain the dependencies of your pa
 ```sh
 ./create-docker-image.sh
 ```
+This will create the file `node-builder.image` which contains the docker image that will be used to build the project.
 
 Then use that docker image to create a container to build your project:
 ```sh
 ./build.sh
 ```
+
+If you update your package.json you'll have to create a new docker image.
+```sh
+./create-docker-image.sh
+git add package.json node-builder.image
+git commit -m "Update dependencies"
+```
+
+
+

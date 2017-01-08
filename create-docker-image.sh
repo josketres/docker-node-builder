@@ -7,3 +7,4 @@ id=$(docker images -q josketres/node-builder:tmp)
 docker build -t $image:$id .
 docker rmi $image:tmp
 echo "$image:$id" > node-builder.image
+# here you have to push the image to docker registry
