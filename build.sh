@@ -1,7 +1,12 @@
 #!/bin/bash
 #Build this project's frontend code using a docker container as the builder (node based)
 
-image=josketres/node-builder
+if [ ! -f 'node-builder.image' ]; then
+    >&2 echo 'No docker image name found. Run ./create-docker-image.sh and try again.'
+    exit 1
+fi
+
+image=$(cat 'node-builder.image')
 mount=$(pwd):/project
 
 set -e 

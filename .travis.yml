@@ -4,8 +4,10 @@ node_js:
 services:
   - docker
 script:
+  # first build project locally
   - npm i
   - gulp
-  - docker build -t josketres/node-builder .
-  - ./build-with-docker-container.sh
+  # now build project with a docker image
+  - ./create-docker-image.sh
+  - ./build.sh
 
